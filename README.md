@@ -2,7 +2,7 @@
 
 Oh we do love our Comic Sans fonts don't we? The best font ever.
 
-<img src="https://raw.githubusercontent.com/gangstead/atom-comic-sans/master/example.png">
+<img src="https://raw.githubusercontent.com/gangstead/atom-comic-sans/master/example.jpg">
 
 # How to use
 
