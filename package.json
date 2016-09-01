@@ -1,0 +1,19 @@
+{
+  "name": "atom-comic-sans",
+  "main": "./lib/comic",
+  "version": "0.0.1",
+  "description": "Liven up your code",
+  "repository": "https://github.com/gangstead/atom-comic-sans",
+  "license": "MIT",
+  "engines": {
+    "atom": ">=1.0"
+  },
+  "dependencies": {},
+  "keywords": [
+    "fonts",
+    "comic",
+    "programming",
+    "typography",
+    "comic sans"
+  ]
+}

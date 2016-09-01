@@ -1,0 +1,74 @@
+@root-path: 'atom://fonts/resources';
+
+.font (@name, @weight, @style)
+  when (@weight = normal)
+  and (@style = normal) {
+
+  @font-face {
+    font-family: @name;
+    font-weight: @weight;
+    font-style: @style;
+  }
+}
+
+.font (@name, @weight, @style)
+  when (@weight = bold)
+  and (@style = normal) {
+
+  @font-face {
+    font-family: @name;
+    font-weight: @weight;
+    font-style: @style;
+  }
+}
+
+.font (@name, @weight, @style)
+  when (@weight = normal)
+  and (@style = italic) {
+
+  @font-face {
+    font-family: @name;
+    font-weight: @weight;
+    font-style: @style;
+  }
+}
+
+.font (@name, @weight, @style)
+  when (@weight = 'bold')
+  and (@style = 'italic') {
+
+  @font-face {
+    font-family: @name;
+    font-weight: @weight;
+    font-style: @style;
+  }
+}
+
+.editor-font (@fontFamily) {
+  //force loading all styles
+  fonts-fixer,
+  //set the base editor font
+  atom-text-editor,
+  atom-text-editor::shadow {
+    font-family: @fontFamily;
+  }
+  //force the mini editor in settings for ui themes that change that (i.e. Isotope)
+  .settings-view atom-text-editor.mini,
+  .settings-view atom-text-editor.mini::shadow {
+    font-family: @fontFamily !important;
+  }
+}
+
+.no-smoothing() {
+  atom-text-editor:not(.mini),
+  atom-text-editor:not(.mini)::shadow {
+    font-smooth: never;
+    -webkit-font-smoothing : none;
+  }
+}
+
+.ligatures() {
+  atom-text-editor {
+    text-rendering: optimizeLegibility;
+  }
+}
